@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3e5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .paper {
+            background: #fff;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transform: rotate(-1deg);
+            /* Ligera inclinación realista */
+            line-height: 1.6;
+            font-size: 1.4rem;
+            color: #444;
+            background-image: linear-gradient(#999 0.05em, transparent 0.1em);
+            background-size: 100% 2rem;
+            /* Líneas de cuaderno */
+        }
+
+        .paper:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.05);
+            /* Textura de papel viejo */
+            pointer-events: none;
+        }
+
+        .btn-back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            background: #ff4081;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="paper">
+        <p>Querida Yosselin, 🌹</p>
+        <p>
+            Hoy el mundo celebra un año más de tu vida 🎉, y me alegra haber coincidido contigo en ella ✨.
+        </p>
+        <p>
+            Dicen que en internet nada desaparece 🌐, y por eso elegí este lugar: para decirte lo importante que eres de
+            una forma que no se marchite 🌻. He programado cada rincón de este regalo pensando en ti jeje 🤭, intentando
+            transformar código en cariño para que sepas que ocupas un lugar gigante en mis pensamientos 💖.
+        </p>
+        <p>
+            Dejo esto escrito aquí, donde el tiempo no borra las palabras 📝, esperando que este pequeño detalle logre
+            sacarte esa sonrisa que tanto me gusta 😊.
+        </p>
+        <p>
+            Que la vida te sorprenda tanto como tú me sorprendes a mí 🎁. ¡Feliz cumpleaños! 🎂🥳
+        </p>
+        <p style="text-align: right;">Con mucho cariño,<br> Jherson ❤️
+            <a href="index.html" class="btn-back">⬅ Volver a la fiesta</a>
+    </div>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="assets/musica_fondo.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bg-music');
+            audio.volume = 0.5;
+            audio.play().catch(e => {
+                console.log("Autoplay bloqueado, esperando interacción usuario");
+                // Opcional: Mostrar un botón de play si falla
+                document.body.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+
+</html>
